@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 5fr 3fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        'header header header header'
+        'hero hero hero hero'
+        'menu main main main'
+        'menu banner banner banner'
+        'menu extra extra image';
+}
+
+@media only screen and (min-width: 768px){
+    body{
+        display: grid;
+        grid-template-rows: 1fr 5fr 2fr 2fr 2fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            'header menu menu menu'
+            'hero hero hero hero'
+            'main main . image'
+            'main main . extra'
+            'banner banner banner banner';
+    }
+}
+
+@media only screen and (max-width: 600px){
+    body{
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 2fr 3fr 2fr 2fr 1fr ;
+        grid-template-areas: 
+            'header'
+            'menu'
+            'hero'
+            'main'
+            'banner'
+            'extra'
+            'image';
+    }
+}
+
+.header {
+    grid-area: header;
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.menu {
+    grid-area: menu;
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: salmon;
+}
+
+.hero {
+    grid-area: hero;
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue;
+}
+
+.main {
+    grid-area: main;
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkblue;
+}
+
+.image {
+    grid-area: image;
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: salmon;
+}
+
+.extra {
+    grid-area: extra;
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+}
+
+.banner {
+    grid-area: banner;
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: yellowgreen;
+}
+

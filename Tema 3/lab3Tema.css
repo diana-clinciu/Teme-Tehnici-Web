@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+.dropdown{
+    background-color: black;
+    color: azure;
+    position: relative;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    transition: background-color 4s;
+}
+
+.dropdown:hover{
+   background-color:rgb(82, 80, 80); 
+}
+.dropdown-content{
+    background-color: black;
+    position: absolute;
+    z-index: 100;
+    display: none;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition: display 20s;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+@keyframes rainbow {
+    0% {background-color: red;}
+    12.5% {background-color: orange;}
+    25% {background-color: rgb(207, 207, 98);}
+    37.5% {background-color: green;}
+    50% {background-color: rgb(20, 76, 230);}
+    62.5% {background-color: blueviolet;}
+    75%{background-color: darkmagenta;}
+    87.5%{background-color: deeppink;}
+    100%{background-color: black;}
+}
+
+li{
+    list-style: none;
+}
+a{
+    color:azure;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+#rand1:hover, #rand2:hover, #rand3:hover{
+    animation-name: rainbow;
+    animation-duration: 10s;
+}
