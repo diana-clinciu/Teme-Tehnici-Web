@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
     let rawdata = fs.readFileSync('students.json');
     let jsonData = JSON.parse(rawdata);
     
-    let jsonTxt= JSON.stringify(jsonData,null, 3);
+    let jsonTxt = JSON.stringify(jsonData,null, 3);
 
     res.render('pages/index',{jsonTxt: jsonTxt});
 
